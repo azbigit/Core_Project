@@ -1,0 +1,50 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "About", FormMethod.Post))
+{
+
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <form class="forms-sample">
+                    <div class="form-group">
+    
+                @Html.HiddenFor(x => x.AboutID)
+                <br />
+                <label>Başlık</label>
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                <br />
+                <label>Yaş</label>
+                @Html.TextBoxFor(x => x.Age, new { @class = "form-control" })
+                <br />
+                <label>mail</label>
+                @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+                <br />
+                <label>Telefon</label>
+                @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                <br />
+                <label>Adres</label>
+                @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+                <br />
+                <label>Resim</label>
+                @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                <br />
+                <label>Açıklama</label>
+                @Html.TextAreaFor(x => x.Description, 10, 2, new { @class = "form-control" })
+                <br />
+                        <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                        <button class="btn btn-dark">İptal</button>
+                </div>  
+              </form>
+        </div>
+        </div>
+    </div>
+}
+
+
+
+

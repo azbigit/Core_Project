@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete
+@model List<Portfolio>
+
+
+<div class="row">
+   
+        <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Proje Maliyet İstatistiği</h4>
+                    <canvas id="transaction-history" class="transaction-chart"></canvas>
+                @foreach (var item in Model)
+                {
+                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                        <div class="text-md-center text-xl-left">
+                            <h6 class="mb-1"> @item.Name</h6>
+                            <p class="text-muted mb-0">@item.Price  </p>
+                        </div>
+                    </div>
+                }
+                </div>
+            </div>
+        </div>
+    
+   
+    
+   
+
+   
